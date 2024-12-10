@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+
 import { Button } from "./ui/button";
 
 export const pricingPlans = [
@@ -49,14 +50,16 @@ const Pricing = () => {
               options.
             </p>
           </div>
-          <div className="flex justify-center py-12 gap-4 max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+          <div
+            className="flex justify-center py-12 gap-4 max-w-7xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             {pricingPlans.map((pricing, index) => (
               <div
                 key={index}
                 className={`relative p-8 h-96 w-full border rounded-md flex flex-col justify-between ${
-                  pricing.mostPopular
-                    ? "border-2 border-primary"
-                    : "border-1"
+                  pricing.mostPopular ? "border-2 border-primary" : "border-1"
                 }`}
               >
                 {/* Badge "Popular" */}
@@ -78,7 +81,7 @@ const Pricing = () => {
                       key={featureIndex}
                       className="flex items-center mb-2 text-sm"
                     >
-                      <Check size={24} className="mx-4 text-primary" />
+                      <Check className="mx-4 text-primary" size={24} />
                       <p>{feature}</p>
                     </span>
                   ))}

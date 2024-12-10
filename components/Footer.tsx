@@ -71,7 +71,10 @@ export const Footer = () => {
   ];
 
   return (
-    <div className="w-full py-20 lg:py-8 bg-primary text-background" data-aos="fade-up">
+    <div
+      className="w-full py-20 lg:py-8 bg-primary text-background"
+      data-aos="fade-up"
+    >
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Footer Brand Section */}
@@ -111,8 +114,8 @@ export const Footer = () => {
                     item.items.map((subItem) => (
                       <Link
                         key={subItem.title}
-                        href={subItem.href}
                         className="text-background/75"
+                        href={subItem.href}
                       >
                         {subItem.title}
                       </Link>

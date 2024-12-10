@@ -27,7 +27,7 @@ export const FAQ = () => (
 
         {/* FAQ Items */}
         <div className="max-w-3xl w-full mx-auto">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion collapsible className="w-full" type="single">
             {/* Question 1 */}
             <AccordionItem value="q1">
               <AccordionTrigger>

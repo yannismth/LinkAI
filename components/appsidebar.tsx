@@ -1,5 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { BarChart, Calendar, Settings, LogOut, TrendingUp } from "lucide-react"; // Icônes
+
 import {
   Sidebar,
   SidebarContent,
@@ -12,8 +15,6 @@ import {
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/utils/supabase";
-import { useRouter } from "next/navigation";
-import { BarChart, Calendar, Settings, LogOut, TrendingUp } from "lucide-react"; // Icônes
 
 const menuItems = [
   { title: "Tableau de bord", href: "/dashboard", icon: BarChart },
@@ -47,8 +48,8 @@ export function AppSidebar() {
                 <SidebarMenuItem key={index}>
                   <SidebarMenuButton asChild>
                     <a
-                      href={item.href}
                       className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-100"
+                      href={item.href}
                     >
                       <item.icon className="w-5 h-5 text-gray-600" />
                       <span>{item.title}</span>
@@ -64,8 +65,8 @@ export function AppSidebar() {
       {/* Bouton de déconnexion */}
       <SidebarFooter className="p-6 border-t border-gray-200">
         <Button
-          variant="ghost"
           className="w-full flex items-center gap-3 text-gray-700 hover:bg-gray-100"
+          variant="ghost"
           onClick={handleSignOut}
         >
           <LogOut className="w-5 h-5" />
